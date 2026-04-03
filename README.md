@@ -85,5 +85,5 @@ These visualizations confirm the model focuses on anatomically meaningful region
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/Pancreatic-Tumor-Classification-3D-Transformers.git
-cd Pancreatic-Tumor-Classification-3D-Transformers
+git clone https://github.com/DasBytes/Explainable-3D-Swin-Transformer-Pancreas.git
+cd Explainable-3D-Swin-Transformer-Pancreas
