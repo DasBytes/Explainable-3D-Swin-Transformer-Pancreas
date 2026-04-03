@@ -1,83 +1,89 @@
-Explainable Vision Transformer for Pancreatic Tumor Classification (CT)
+# Explainable Vision Transformer for Pancreatic Tumor Classification (CT)
 
-This repository contains the official implementation of a 3D Swin Transformer–based deep learning framework for detecting pancreatic tumors from volumetric CT scans.
-The framework integrates Explainable AI (XAI) to provide clinical transparency alongside high diagnostic performance.
+This repository contains the official implementation of a **3D Swin Transformer–based deep learning framework** for detecting pancreatic tumors from volumetric CT scans.  
+The framework integrates **Explainable AI (XAI)** to provide clinical transparency alongside high diagnostic performance.
 
-Project Overview
+---
 
-Pancreatic cancer is difficult to detect early due to subtle visual differences and complex anatomy in CT imaging.
-This project addresses these challenges using a transformer-based medical imaging pipeline:
+# 📌 Project Overview
 
-Key Contributions
-Hierarchical Attention
-3D Swin Transformer captures both local spatial features and long-range dependencies.
-Explainability
-3D Grad-CAM highlights diagnostically relevant tumor regions.
-Improves clinician trust and interpretability.
-High Performance
+Pancreatic cancer is difficult to detect early due to subtle visual differences and complex anatomy in CT imaging.  
+This project addresses these challenges using a transformer-based medical imaging pipeline.
+
+---
+
+## ⭐ Key Contributions
+
+### 🧠 Hierarchical Attention
+3D Swin Transformer captures both **local spatial features** and **long-range dependencies**.
+
+### 🔍 Explainability
+- 3D Grad-CAM highlights diagnostically relevant tumor regions  
+- Improves clinician trust and interpretability
+
+### 🚀 High Performance
 Outperforms traditional CNN-based models for pancreatic tumor classification.
-Dataset
 
-The model is trained and evaluated using the:
+---
 
-Medical Segmentation Decathlon (MSD) – Task 07 Pancreas
+# 📊 Dataset
 
-Dataset Details
+The model is trained and evaluated using:
 
-Portal venous phase abdominal CT scans
-Expert-refined annotations
-Total slices: 26,719
-Tumor slices: 2,537
-Non-tumor slices: 24,182
+**Medical Segmentation Decathlon (MSD) – Task 07 Pancreas**
 
-Preprocessing
+### Dataset Details
+- Portal venous phase abdominal CT scans  
+- Expert-refined annotations  
+- **Total slices:** 26,719  
+- **Tumor slices:** 2,537  
+- **Non-tumor slices:** 24,182  
 
-Resampled to 1×1×1 mm³
-Intensity normalized to [0, 1]
-Model Architecture — 3D Swin Transformer
+### Preprocessing
+- Resampled to **1×1×1 mm³**
+- Intensity normalized to **[0, 1]**
+
+---
+
+# 🏗️ Model Architecture — 3D Swin Transformer
 
 Pipeline overview:
 
-Patch Partitioning
-Volumes are divided into non-overlapping 3D patches.
-Linear Embedding
-Flattened patches projected into feature space.
-Shifted Window Attention (SW-MSA)
-Enables cross-window contextual learning.
-Hierarchical Representation
-Spatial resolution decreases while feature depth increases.
+1. **Patch Partitioning**  
+   Volumes are divided into non-overlapping 3D patches.
 
+2. **Linear Embedding**  
+   Flattened patches projected into feature space.
+
+3. **Shifted Window Attention (SW-MSA)**  
+   Enables cross-window contextual learning.
+
+4. **Hierarchical Representation**  
+   Spatial resolution decreases while feature depth increases.
+
+---
+
+# 📈 Performance
 
 The transformer-based approach significantly improves classification performance.
 
-Explainable AI (Grad-CAM)
+---
 
-We apply 3D Grad-CAM to visualize model decision regions.
+# 🔬 Explainable AI (Grad-CAM)
 
-🔴 Red regions → Tumor-relevant areas
-🔵 Blue regions → Healthy pancreatic tissue
+We apply **3D Grad-CAM** to visualize model decision regions.
+
+- 🔴 **Red regions → Tumor-relevant areas**
+- 🔵 **Blue regions → Healthy pancreatic tissue**
 
 These visualizations confirm the model focuses on anatomically meaningful regions.
 
-Installation
+---
+
+# ⚙️ Installation
 
 Clone the repository:
 
+```bash
 git clone https://github.com/yourusername/Pancreatic-Tumor-Classification-3D-Transformers.git
 cd Pancreatic-Tumor-Classification-3D-Transformers
-
-Install dependencies:
-
-pip install -r requirements.txt
-
-
-
-
-
-
-Department of Computer Science & Engineering
-East Delta University, Bangladesh
-
-License
-
-This project is licensed under the MIT License.
